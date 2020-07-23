@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SignUp</title>
+		<link rel="stylesheet" type="text/css" href="/views/Signup.css">
+		<script type="text/javascript" src="index_js.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="Mon, 26 Jul 1997 05:00:00 GMT" />
+	</head>
+	<body>
+		<div id="btn_panel" class=.container-fluid>
+			<div class="row" id="btncol">
+				<div class="col-sm-4"><img src="/views/Line2.png" id="line"></div>
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4" id="btncol"><a href="/"><button type="button" id="btn" class="obj">Sign In</button></a></div>
+			</div>
+		</div>
+		<br>
+		<div class="row centered-form">
+			<div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Please sign up for Nakli Quora!</h3>
+					</div>
+					<div class="panel-body">
+						<%- include ("messages") %>
+						<form role="form" action="/signup" method="POST">
+							<div class="row">
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="first_name" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name" required>
+									</div>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="last_name" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name" required>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address" required>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password" required>
+									</div>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password" required>
+									</div>
+								</div>
+							</div>
+							<input type="submit" value="Register" class="btn btn-info btn-block">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

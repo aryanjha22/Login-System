@@ -1,0 +1,113 @@
+html{
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+div.wrap {
+	width: 1268;
+	margin:0 auto;
+}
+
+#btn_panel {
+	background-color: #35080D;
+	text-align: center;
+	height: 50px;
+}
+
+#btn{
+	margin-top: 8px;
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden; 
+	font-size: 150%;
+	font-family: sans-serif;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+
+#btncol{
+	padding: 0;
+	margin: 0;
+}
+
+#logo {
+	height: 50px;
+}
+
+#line {
+	height: 50px;
+}
+
+#About-Login {
+	width: 95%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#about-heading {
+	font-size: 51px;
+	text-decoration: underline ;
+}
+
+#about-content {
+	font-size: 20px;
+	text-align: justify-all;
+}
+
+
+
+form {
+	border: 3px solid #f1f1f1;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+/*input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}*/
+
+#login-btn {
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	cursor: pointer;
+	width: 80px;
+	height: 30px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+#greyzone-login {
+	width: auto;
+	height: 30px;
+	text-align: right;
+	background-color:#f1f1f1
+} 
+
+
+#new-user {
+	width: auto;
+	text-align: left;
+}
+
+#login-container {
+	width: auto;
+}

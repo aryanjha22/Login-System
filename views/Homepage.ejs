@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HomePage</title>
+		<link rel="stylesheet" type="text/css" href="/views/Homepage.css">
+		<script type="text/javascript" src="index_js.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="Mon, 26 Jul 1997 05:00:00 GMT" />
+	</head>
+	<body>
+		<div id="btn_panel" class=.container-fluid>
+			<div class="row" id="btncol">
+				<div class="col-sm-4"><img src="/views/Line2.png" id="line"></div>
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4" id="btncol"><a href="/signup"><button type="button" id="btn" class="obj">Sign Up</button></a></div>
+			</div>
+		</div>
+		<br>
+		<div class="row" id="About-Login">
+			<div class="col-sm-7" id="about">
+				<H1 id="about-heading">About</H1>
+				<para id="about-content">
+					This is a wesite made for learning and hands on experience with Web Development. This is a blogging website like Quora. We tried to add all the basic functionalities of a blogging website.
+				</para>
+				<br>
+				<br>
+				<para id="about-content">
+					You can login/signup to this website and start reading/writing. You can also search for questions/blogs from specific topic/tag. You can follow your favourite writers and you will be notified as soon as they write anything.
+				</para>
+				<br>
+				<br>
+				<para id="about-content">
+					We hope you will enjoy using this website. Any queries/advice are welcome, please contact us (details at the bottom of the page). 
+				</para>
+			</div>
+			<div class="col-sm-5" id="signin">
+				<h2>Login</h2>
+				<%- include ("messages") %>
+				<div class="container" id="login-container">
+					<form class="form-horizontal">
+						<br>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="email">Email</label>
+							<div class="col-sm-10">
+								<input type="email" placeholder="Enter Email" id="email" name="email" class="form-control" required >
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="password">Password</label>
+							<div class="col-sm-10">
+								<input type="password" placeholder="Enter Password" id="password" name="password" class="form-control" required >
+							</div>
+						</div>
+						<div class="form-group">
+						    <div class="col-sm-offset-2 col-sm-10">
+						    	<button type="submit" class="button" id="login-btn">Submit</button>
+						    </div>
+						    <div class="container" id="new-user">
+								<span><a href="/signup">New User? Sign up here.</a></span>
+							</div>
+						</div>
+						<div class="container" id="greyzone-login">
+							<span id="forgot-psw"><a href="#">Forgot password?</a></span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

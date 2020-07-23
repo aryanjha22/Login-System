@@ -1,0 +1,46 @@
+body{
+	font-family: Arial, Helvetica, sans-serif;
+    background-color: #525252;
+    overflow-x: hidden;
+}
+.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+#btn_panel {
+	background-color: #35080D;
+	text-align: center;
+	height: 50px;
+}
+
+#btn{
+	margin-top: 8px;
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden; 
+	font-size: 150%;
+	font-family: sans-serif;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+
+#btncol{
+	padding: 0;
+	margin: 0;
+}
+
+#logo {
+	height: 50px;
+}
+
+#line {
+	height: 50px;
+}
