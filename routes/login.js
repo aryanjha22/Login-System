@@ -3,6 +3,9 @@ const router = express.Router()
 const bcrypt = require('bcryptjs')
 const passport = require('passport')
 
+// for protecting pages -- login
+const {ensureAuthenticated} = require('../config/auth')
+
 const User = require('../models/user')
 
 // renders
@@ -14,8 +17,11 @@ router.get('/signup', (req,res) => {
     res.render('Signup')
 });
 
-router.get('/welcome', (req,res) => {
-    res.render('welcome')
+// added protection
+router.get('/welcome', ensureAuthenticated, (req,res) => {
+    res.render('welcome', {
+        //first_name: req.user.first_name
+    })
 })
 
 // conditions
@@ -85,5 +91,12 @@ router.post('/', (req,res, next) => {
         failureFlash : true
     }) (req, res, next);
 });
+
+// Not added yet
+router.get('/logout', (req,res) =>{
+    req.logout();
+    req.flash('success_msg', 'Logged out user!')
+    res.redirect('/')
+})
 
 module.exports = router;
