@@ -1,3 +1,6 @@
+
+// Authentication and checking for conditions in homepage using passport
+
 const LocalStrategy = require('passport-local').Strategy;
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs')

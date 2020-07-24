@@ -5,6 +5,7 @@ const passport = require('passport')
 
 const User = require('../models/user')
 
+// renders
 router.get('/', (req,res) => {
     res.render('Homepage')
 });
@@ -13,6 +14,11 @@ router.get('/signup', (req,res) => {
     res.render('Signup')
 });
 
+router.get('/welcome', (req,res) => {
+    res.render('welcome')
+})
+
+// conditions
 router.post('/signup', (req,res) => {
     const{first_name, last_name, email, password, password_confirmation} = req.body;
     let errors = [];
@@ -47,6 +53,8 @@ router.post('/signup', (req,res) => {
                     email,
                     password
                 });
+                
+                //bcrypt password hashing
 
                 bcrypt.genSalt(10, (err, salt) => 
                     bcrypt.hash(newUser.password, salt, (err, hash) =>{
@@ -68,6 +76,8 @@ router.post('/signup', (req,res) => {
 
 });
 
+
+// passport authentication
 router.post('/', (req,res, next) => {
     passport.authenticate('local', {
         successRedirect : '/welcome',

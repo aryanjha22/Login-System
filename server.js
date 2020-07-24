@@ -9,21 +9,25 @@ const app = express()
 
 require('./config/passport')(passport);
 
+//body parser
 app.use(express.json());
 
+//express-session
 app.use(session({
     secret: 'secret',
     resave: true,
     saveUninitialized: true
   }))
 
+//passport initialisation
 app.use(passport.initialize());
 app.use(passport.session());
 
+//flash-messages
 app.use(flash());
 
 
-// errross
+// error handling and using in messages.ejs
 app.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg')
     res.locals.error_msg = req.flash('error_msg')
@@ -32,22 +36,27 @@ app.use((req, res, next) => {
     next();
 })
 
+//mongo URI
 const db = require('./config/keys').MongoURI
 
 mongoose.connect(db, {useCreateIndex : true, useUnifiedTopology: true, useNewUrlParser: true})
     .then(() => console.log('Mongo Server running...'))
     .catch(err => console.log(err));
 
-
+//server running
 const PORT = process.env.PORT||2000;  
-app.listen(PORT, console.log(`Server is running on ${PORT} `));
+app.listen(PORT, console.log(`Server is running on ${PORT}... `));
+
+//body parser
 app.use(express.urlencoded({extended:true}))
 
-
+//requiring routes
 app.use('/', require('./routes/login')) 
 app.use(expressLayouts);
 
+//view-engine for ejs
 app.set('view engine', 'ejs');
 
+//adding css in ejs files
 app.use("/views",express.static(__dirname + "/views"));              
 
