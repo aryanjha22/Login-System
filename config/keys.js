@@ -1,3 +1,3 @@
 module.exports ={
-    MongoURI : 'enter your mongo url'
+    MongoURI : 'my url'
 }
